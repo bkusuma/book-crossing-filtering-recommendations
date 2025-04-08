@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "book_crossing_filtering_recommendations"
+version = "0.0.1"
+description = "user-based collaborative filtering and iendations"
+authors = [
+  { name = "bkusuma" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["book_crossing_filtering_recommendations"]
+include = ["pyproject.toml", "book_crossing_filtering_recommendations/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["book_crossing_filtering_recommendations"]
+force-sort-within-sections = true
+
